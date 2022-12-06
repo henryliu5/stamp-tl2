@@ -352,10 +352,10 @@
 
 #  else /* !OTM */
 
-#    define TM_ARG                        STM_SELF,
-#    define TM_ARG_ALONE                  STM_SELF
-#    define TM_ARGDECL                    STM_THREAD_T* TM_ARG
-#    define TM_ARGDECL_ALONE              STM_THREAD_T* TM_ARG_ALONE
+#    define TM_ARG                        /* nothing HL 12/5/22 */
+#    define TM_ARG_ALONE                  /* nothing HL 12/5/22 */
+#    define TM_ARGDECL                    /* nothing HL 12/5/22 */
+#    define TM_ARGDECL_ALONE              /* nothing HL 12/5/22 */
 #    define TM_CALLABLE                   /* nothing */
 
 #endif /* !OTM */
@@ -420,9 +420,12 @@
 #      define TM_STARTUP(numThread)     STM_STARTUP()
 #      define TM_SHUTDOWN()             STM_SHUTDOWN()
 
-#      define TM_THREAD_ENTER()         TM_ARGDECL_ALONE = STM_NEW_THREAD(); \
-                                        STM_INIT_THREAD(TM_ARG_ALONE, thread_getId())
-#      define TM_THREAD_EXIT()          STM_FREE_THREAD(TM_ARG_ALONE)
+// #      define TM_THREAD_ENTER()         TM_ARGDECL_ALONE = STM_NEW_THREAD(); \
+//                                         STM_INIT_THREAD(TM_ARG_ALONE, thread_getId())
+// #      define TM_THREAD_EXIT()          STM_FREE_THREAD(TM_ARG_ALONE)
+
+#      define TM_THREAD_ENTER()         /* nothing HL 12/5/22 */
+#      define TM_THREAD_EXIT()          /* nothing HL 12/5/22 */
 
 #      define P_MALLOC(size)            malloc(size)
 #      define P_FREE(ptr)               free(ptr)
