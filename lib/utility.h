@@ -82,22 +82,22 @@
 
 #define MAX(a,b) \
     ({ \
-        typeof(a) _a = (a); \
-        typeof(b) _b = (b); \
+        __typeof__(a) _a = (a); \
+        __typeof__(b) _b = (b); \
         (_a > _b) ? (_a) : (_b); \
     })
 
 #define MIN(a,b) \
     ({ \
-        typeof(a) _a = (a); \
-        typeof(b) _b = (b); \
+        __typeof__(a) _a = (a); \
+        __typeof__(b) _b = (b); \
         (_a < _b) ? (_a) : (_b); \
     })
 
 #define DIVIDE_AND_ROUND_UP(a,b) \
     ({ \
-        typeof(a) _a = (a); \
-        typeof(b) _b = (b); \
+        __typeof__(a) _a = (a); \
+        __typeof__(b) _b = (b); \
         (_a / _b) + (((_a % _b) > 0) ? (1) : (0)); \
     })
 
