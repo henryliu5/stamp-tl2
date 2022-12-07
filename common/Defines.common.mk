@@ -12,7 +12,7 @@ CFLAGS   += -I$(LIB)
 CPP      := g++
 CPPFLAGS += $(CFLAGS)
 LD       := g++
-LIBS     += -lpthread
+LIBS     += -lpthread -ltl2 -L../../my_tl2_lib
 
 # Remove these files when doing clean
 OUTPUT +=
